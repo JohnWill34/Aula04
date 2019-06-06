@@ -1,0 +1,43 @@
+Respansividade - Capacidade do site se adaptar nas resoluções de telas existentes
+
+--breakpoints - pontos de mudança de comportamento do site
+
+
+
+
+CSS-------------------------------------------------------------------------
+
+/*  Iniciamos respansividade   */
+
+body{
+    margin: 0;                                      /*  definindo sem margem  */
+}
+nav{                                                /*  mudando a altura  */
+    height: 60px;                                   /*  mudando a altura  */
+    background-color: blueviolet;                 /*  mudando a cor  */
+}
+
+img{
+    align-content: center
+}
+/*  Definindo pointbreake   *
+
+@media(max-width:800px){                            /*  define largura máxima em 800px, a partir disso as propriedades internas entram  */
+    nav{                                            /*  mudar propriedades da nav  */
+        background-color: pink;                   /*  cor do fundo  */
+        height: 120px;                              /*  mudando a altura  */
+    }  
+
+}   
+@media(max-width:600px){                            /*  definindo a largura máxima em 600px, a partir disso as propriedades internas entram  */
+    img{                                            /*  mudar propriedades da nav  */
+       display: none;                               /*  até 600px, não tem  imagem, pós 600px ela aparece  */
+     }                                             
+}   
+@media(max-width:500px){                            /*  definindo a largura máxima em 500px, a partir disso as propriedades internas entram  */
+    nav{                                            /*  mudar propriedades da nav  */
+        background-color: purple;                 /*  mmudar cor de fundo  */
+        height: 120px;                              /*  mudando a altura  */
+    }
+
+}

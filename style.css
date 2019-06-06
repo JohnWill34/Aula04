@@ -1,0 +1,82 @@
+
+body{
+    margin: 0;                                         /*  definindo sem margem  */
+    display: grid;                                     /*  template grid  */
+    grid-template-areas: 'navbar navbar navbar navbar'
+                         'header header header header' 
+                         'section section aside aside' 
+                         'footer footer footer footer';
+
+    grid-template-rows: 20vh 20vh 20vh 20vh;           /*  para as 4 linhas, definir espaço  */
+
+}
+
+
+/* ------------------------------------- HEADER  ------------------------------------------------ */
+
+nav{                                                   /*  mudando a altura  */
+
+    grid-area: navbar;                                 /*  definindo o vav como navbar  */
+    height: 20vh;                                      /*  mudando a altura  */
+    background-color: rgb(53, 53, 53);               /*  mudando a cor  */
+    display: flex;                                     /*  definindo display flex  */
+    align-items: center;                               /*  definindo alinhamento horizontal  */
+    justify-content: space-around;                     /*  Separando os itens  */
+    
+}
+
+img{                                                   /*  Definindo a imagem  */
+    cursor: pointer;                                   /*  Quando passar o mouse vira a mão  */
+    display: none;                                     /*  Não mostra a imagem  */
+}
+
+@media(max-width: 768px){                              /*  Media Queries com 768px máximo */
+    nav a {
+        display: none;
+    
+    }
+    nav img{                                           /*  Editando imagem da nav  */
+        display: block;
+    }
+}
+
+/* ------------------------------------------ GRID ---------------------------------------------------- */
+
+header{                                                /*  Definindo o header do grid  */
+    grid-area: header;
+    background-color: red;
+}
+section{                                               /*  Definindo a section do grid  */
+    grid-area: section;
+    background-color: blue;
+}
+aside{                                                 /*  Definindo o header do grid  */
+    grid-area: aside;
+    background-color: orange;
+}
+footer{                                                /*  Definindo o header do grid  */
+    grid-area: footer;
+    background-color: greenyellow;
+}
+
+/* ---------------------------------------- MEDIA ----------------------------------------------------- */
+
+@media(max-width: 768px){                             /*  Media Queries  */
+    body{
+        grid-template-areas: 'navbar navbar navbar navbar'
+                             'header header header header' 
+                             'section section section section' 
+                             'aside aside aside aside' 
+                             'footer footer footer footer';
+        grid-template-rows: 20vh 20vh 20vh 20vh 20vh;                    /*  Aqui precisa acrescentar mais uma linha  */
+        grid-gap: 10px;                                                  /*  Espaço entre as estrofes  */
+    }
+
+    nav a {
+        display: none;
+    
+    }
+    nav img{
+        display: block;
+    }
+}
