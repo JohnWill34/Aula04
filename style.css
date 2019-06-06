@@ -3,11 +3,10 @@ body{
     margin: 0;                                         /*  definindo sem margem  */
     display: grid;                                     /*  template grid  */
     grid-template-areas: 'navbar navbar navbar navbar'
-                         'header header header header' 
-                         'section section aside aside' 
+                         'header section aside div' 
                          'footer footer footer footer';
 
-    grid-template-rows: 20vh 20vh 20vh 20vh;           /*  para as 4 linhas, definir espaço  */
+    grid-template-rows: 20vh 70vh 40vh ;           /*  para as 3 linhas, definir espaço  */
 
 }
 
@@ -54,9 +53,15 @@ aside{                                                 /*  Definindo o header do
     grid-area: aside;
     background-color: orange;
 }
+
+div{                                                  /*  Definindo o div do grid  */
+    grid-area: div;
+    background-color: yellowgreen;
+}
+
 footer{                                                /*  Definindo o header do grid  */
     grid-area: footer;
-    background-color: greenyellow;
+    background-color: yellow;
 }
 
 /* ---------------------------------------- MEDIA ----------------------------------------------------- */
@@ -64,11 +69,10 @@ footer{                                                /*  Definindo o header do
 @media(max-width: 768px){                             /*  Media Queries  */
     body{
         grid-template-areas: 'navbar navbar navbar navbar'
-                             'header header header header' 
-                             'section section section section' 
-                             'aside aside aside aside' 
+                             'header header section section'  
+                             'aside aside div div' 
                              'footer footer footer footer';
-        grid-template-rows: 20vh 20vh 20vh 20vh 20vh;                    /*  Aqui precisa acrescentar mais uma linha  */
+        grid-template-rows: 20vh 70vh 70vh 20vh ;                        /*  Aqui precisa acrescentar mais uma linha  */
         grid-gap: 10px;                                                  /*  Espaço entre as estrofes  */
     }
 
@@ -78,5 +82,18 @@ footer{                                                /*  Definindo o header do
     }
     nav img{
         display: block;
+    }
+}
+
+@media(max-width: 475px){ 
+    body{
+        grid-template-areas: 'navbar navbar navbar navbar'
+                             'header header header header'  
+                             'section section section section'  
+                             'div div div div '  
+                             'aside aside aside aside' 
+                             'footer footer footer footer';
+        grid-template-rows: 20vh 20vh 20vh 20vh 20vh 20vh;                /*  Aqui precisa acrescentar 6 linhas  */
+        grid-gap: 10px;                                                  /*  Espaço entre as estrofes  */
     }
 }
