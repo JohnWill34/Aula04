@@ -24,7 +24,13 @@ nav{                                                   /*  mudando a altura  */
     
 }
 
-img{                                                   /*  Definindo a imagem  */
+nav a{
+    color: whitesmoke;                                /*  Separando os itens  */
+    font-family: Arial, Helvetica, sans-serif;          /*  Colocar o nome da fonte  */
+
+}
+
+nav img{                                               /*  Definindo a imagem no nav  */
     cursor: pointer;                                   /*  Quando passar o mouse vira a mão  */
     display: none;                                     /*  Não mostra a imagem  */
 }
@@ -93,7 +99,25 @@ footer{                                                /*  Definindo o header do
                              'div div div div '  
                              'aside aside aside aside' 
                              'footer footer footer footer';
-        grid-template-rows: 20vh 20vh 20vh 20vh 20vh 20vh;                /*  Aqui precisa acrescentar 6 linhas  */
+        grid-template-rows:20vh 70vh 70vh 70vh 70vh 20vh;                /*  Aqui precisa acrescentar 6 linhas  */
         grid-gap: 10px;                                                  /*  Espaço entre as estrofes  */
     }
+}
+
+/* ---------------------------------------- CLASSE ----------------------------------------------------- */
+
+.takumes{
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    max-width: 90%;
+    padding: 10px;                                                                /*  borda catupiry  */
+}
+
+header,section,aside,div{                                                         /*  tudo com o mesmo  */
+    display: flex;                                                                /*  display ta flex  */
+    align-items: center;                                                         /*  ajusta vertical  */
+    justify-content: center;                                                     /*  ajusta horizontal  */
+    flex-direction: column;                                                      /*  fizemos o flex em clouna, e inverte tudo  */
+
 }

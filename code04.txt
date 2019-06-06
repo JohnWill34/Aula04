@@ -2,6 +2,7 @@ Respansividade - Capacidade do site se adaptar nas resoluções de telas existente
 
 --breakpoints - pontos de mudança de comportamento do site
 
+git pull - download do arquivo clone
 
 
 
